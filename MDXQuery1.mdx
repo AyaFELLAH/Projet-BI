@@ -1,0 +1,60 @@
+--Qst1
+SELECT [Measures].[Discount] ON COLUMNS, 
+{ [Client].[Company Name].[Company Name] * [Produit].[Product Name].[Product Name] } ON ROWS
+FROM [My Northwind DW];
+
+--Qst2
+SELECT [Measures].[Discount] ON 0,
+{ [Client].[Company Name].[Company Name] * [Produit].[Product Name].[Product Name] * [Produit].[Category Name].[Category Name] } ON 1
+FROM [My Northwind DW];
+
+--Qst3
+SELECT [Measures].[Fait Ventes Remise Nombre] ON COLUMNS,
+[Client].[Country].[Country] ON ROWS
+FROM [My Northwind DW];
+
+--Qst4
+SELECT [Measures].[Fait Ventes Remise Nombre] ON COLUMNS,
+TOPCOUNT( [Client].[Region].[Region],1, [Measures].[Fait Ventes Remise Nombre] ) ON ROWS
+FROM [My Northwind DW]
+WHERE [Client].[Country].&[United States];
+
+--Qst5
+SELECT [Measures].[Discount] ON 0,
+TOPCOUNT( [Produit].[Product Name].[Product Name], 1, [Measures].[Discount] ) ON 1
+FROM [My Northwind DW];
+
+--Qst6
+WITH 
+  MEMBER [Measures].[MaxSales] AS
+    MAX([Produit].[Product Name].[Product Name],[Measures].[Fait Ventes Remise Nombre] )
+  MEMBER [Measures].[MinSales] AS
+    MIN([Produit].[Product Name].[Product Name], [Measures].[Fait Ventes Remise Nombre])
+  MEMBER [Measures].[TopProduct] AS
+    HEAD(FILTER([Produit].[Product Name].[Product Name], [Measures].[Fait Ventes Remise Nombre] = [Measures].[MaxSales]), 1).Item(0).Name
+  MEMBER [Measures].[LowProduct] AS
+    HEAD(FILTER([Produit].[Product Name].[Product Name], [Measures].[Fait Ventes Remise Nombre] = [Measures].[MinSales]), 1).Item(0).Name
+SELECT { [Measures].[TopProduct], [Measures].[MaxSales], [Measures].[LowProduct], [Measures].[MinSales] } ON 0,
+  [Client].[Country].[Country].MEMBERS ON 1
+FROM [My Northwind DW];
+
+--Qst7
+WITH 
+MEMBER [Measures].[PourcentageVentes] AS
+  [Measures].[Fait Ventes Remise Nombre] / 
+  SUM(
+    ([Client].[Company Name].[Company Name].MEMBERS, [Client].[Country].[Country].MEMBERS),
+    [Measures].[Fait Ventes Remise Nombre]
+  ) * 100
+
+SELECT 
+  [Measures].[PourcentageVentes] ON COLUMNS,
+  NON EMPTY { ([Client].[Company Name].[Company Name], [Client].[Country].[Country]) } ON ROWS
+FROM 
+  [My Northwind DW];
+
+--Qst8
+SELECT [Measures].[Fait Ventes Remise Nombre] ON 0, [Temps].[Annee].[Annee] ON 1
+FROM [My Northwind DW];
+
+

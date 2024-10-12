@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>DataSource1</DataSourceReference>
+      <CommandText>WITH
+-- Ensemble des produits en filtrant ceux qui ont des ventes
+SET [Filtered Products] AS
+  FILTER(
+    [Produit].[Product Name].[Product Name].MEMBERS,
+    NOT ISEMPTY(
+      (EXISTING [Client].[Country].[Country].MEMBERS,[Measures].[Fait Ventes Remise Nombre])
+    )
+  )
+
+-- Membre calculé pour obtenir les ventes maximales par produit
+MEMBER [Measures].[MaxSales] AS
+  MAX(
+    [Filtered Products], 
+    [Measures].[Fait Ventes Remise Nombre]
+  )
+
+-- Ensemble des produits les plus vendus par pays
+SET [TopProduct] AS
+  FILTER(
+    [Client].[Country].[Country].MEMBERS * [Produit].[Product Name].[Product Name].MEMBERS,
+    [Measures].[Fait Ventes Remise Nombre] = [Measures].[MaxSales]
+  )
+
+-- Sélection et projection des mesures et ensembles définis
+SELECT
+  NON EMPTY { [Measures].[MaxSales] } ON COLUMNS,
+  NON EMPTY { [TopProduct] } ON ROWS
+FROM [My Northwind DW]</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+          <CommandType>MDX</CommandType>
+          <Type>Query</Type>
+          <QuerySpecification xsi:type="MDXQuerySpecification">
+            <Select>
+              <Items>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Client</DimensionName>
+                    <HierarchyName>Country</HierarchyName>
+                    <HierarchyUniqueName>[Client].[Country]</HierarchyUniqueName>
+                    <LevelName>Country</LevelName>
+                    <UniqueName>[Client].[Country].[Country]</UniqueName>
+                  </ID>
+                  <ItemCaption>Country</ItemCaption>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Produit</DimensionName>
+                    <HierarchyName>Product Name</HierarchyName>
+                    <HierarchyUniqueName>[Produit].[Product Name]</HierarchyUniqueName>
+                    <LevelName>Product Name</LevelName>
+                    <UniqueName>[Produit].[Product Name].[Product Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>Product Name</ItemCaption>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>MaxSales</MeasureName>
+                    <UniqueName>[Measures].[MaxSales]</UniqueName>
+                  </ID>
+                  <ItemCaption>MaxSales</ItemCaption>
+                  <FormattedValue>true</FormattedValue>
+                </Item>
+              </Items>
+            </Select>
+            <AutoExecute>false</AutoExecute>
+            <From>My Northwind DW</From>
+            <Filter>
+              <FilterItems />
+            </Filter>
+            <Calculations />
+            <Aggregates />
+            <QueryProperties />
+          </QuerySpecification>
+          <Query>
+            <Statement>WITH
+-- Ensemble des produits en filtrant ceux qui ont des ventes
+SET [Filtered Products] AS
+  FILTER(
+    [Produit].[Product Name].[Product Name].MEMBERS,
+    NOT ISEMPTY(
+      (EXISTING [Client].[Country].[Country].MEMBERS,[Measures].[Fait Ventes Remise Nombre])
+    )
+  )
+
+-- Membre calculé pour obtenir les ventes maximales par produit
+MEMBER [Measures].[MaxSales] AS
+  MAX(
+    [Filtered Products], 
+    [Measures].[Fait Ventes Remise Nombre]
+  )
+
+-- Ensemble des produits les plus vendus par pays
+SET [TopProduct] AS
+  FILTER(
+    [Client].[Country].[Country].MEMBERS * [Produit].[Product Name].[Product Name].MEMBERS,
+    [Measures].[Fait Ventes Remise Nombre] = [Measures].[MaxSales]
+  )
+
+-- Sélection et projection des mesures et ensembles définis
+SELECT
+  NON EMPTY { [Measures].[MaxSales] } ON COLUMNS,
+  NON EMPTY { [TopProduct] } ON ROWS
+FROM [My Northwind DW]
+</Statement>
+            <ParameterDefinitions />
+          </Query>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="Country">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Level" UniqueName="[Client].[Country].[Country]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Product_Name">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Level" UniqueName="[Produit].[Product Name].[Product Name]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="MaxSales">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[MaxSales]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

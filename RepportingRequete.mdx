@@ -1,0 +1,109 @@
+-- Question 1 : La quantité vendue par continent, par pays et par ville
+WITH MEMBER [Measures].[Continent] AS
+    IIF(
+        [Client].[Country].CurrentMember IS [Client].[Country].&[Austria]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&[Belgium]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&[Denmark]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&[Finland]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&[France]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&[Germany]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&[Ireland]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&[Italy]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&[Norway]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&[Poland]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&[Portugal]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&[Spain]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&[Sweden]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&[Switzerland]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&[United Kingdom],
+        "Europe",
+        IIF(
+            [Client].[Country].CurrentMember IS [Client].[Country].&[United States]
+            OR [Client].[Country].CurrentMember IS [Client].[Country].&[Argentina]
+            OR [Client].[Country].CurrentMember IS [Client].[Country].&[Brazil]
+            OR [Client].[Country].CurrentMember IS [Client].[Country].&[Venezuela]
+            OR [Client].[Country].CurrentMember IS [Client].[Country].&[Mexico]
+            OR [Client].[Country].CurrentMember IS [Client].[Country].&[Canada],
+            "Amerique",
+            "Autre"
+        )
+    )
+
+SELECT
+    NON EMPTY { [Measures].[Quantity], [Measures].[Continent] } ON COLUMNS,
+    NON EMPTY [Client].[Country].[Country] * [Client].[City].[City] ON ROWS
+FROM [My Northwind DW]
+
+
+--Question 2
+WITH
+-- Ensemble des produits en filtrant ceux qui ont des ventes
+SET [Filtered Products] AS
+  FILTER(
+    [Produit].[Product Name].[Product Name].MEMBERS,
+    NOT ISEMPTY(
+      (EXISTING [Client].[Country].[Country].MEMBERS,[Measures].[Fait Ventes Remise Nombre])
+    )
+  )
+
+-- Membre calculé pour obtenir les ventes maximales par produit
+MEMBER [Measures].[MaxSales] AS
+  MAX(
+    [Filtered Products], 
+    [Measures].[Fait Ventes Remise Nombre]
+  )
+
+-- Ensemble des produits les plus vendus par pays
+SET [TopProduct] AS
+  FILTER(
+    [Client].[Country].[Country].MEMBERS * [Produit].[Product Name].[Product Name].MEMBERS,
+    [Measures].[Fait Ventes Remise Nombre] = [Measures].[MaxSales]
+  )
+
+-- Sélection et projection des mesures et ensembles définis
+SELECT
+  NON EMPTY { [Measures].[MaxSales] } ON COLUMNS,
+  NON EMPTY { [TopProduct]} ON ROWS
+FROM [My Northwind DW]
+
+--Question 3
+SELECT 
+  // Sélection des mesures de ventes pour les colonnes
+  {[Measures].[Fait Ventes Remise Nombre]} ON COLUMNS,
+  // Croisement des pays et des années pour les lignes
+  NON EMPTY [Client].[Country].[Country] * 
+         [Temps].[Annee].[Annee] ON ROWS
+FROM [My Northwind DW]
+
+SELECT
+  NON EMPTY {[Measures].[Fait Ventes Remise Nombre]} ON COLUMNS,
+  NON EMPTY {
+    [Client].[Country].&[France],
+    [Client].[Country].&[Germany],
+    [Client].[Country].&[Italy],
+    [Client].[Country].&[United States]
+  } * 
+  [Temps].[Annee].[Annee].MEMBERS ON ROWS
+FROM [My Northwind DW];
+
+--Question 4
+WITH 
+MEMBER [Measures].[MaxSales] AS
+  MAX( [Produit].[Product Name].[Product Name], [Measures].[Fait Ventes Remise Nombre])
+
+MEMBER [Measures].[TopProductName] AS
+  TOPCOUNT(
+    [Produit].[Product Name].[Product Name],
+    1,
+    [Measures].[Fait Ventes Remise Nombre]
+  ).Item(0).Member_Caption
+
+SELECT 
+  { [Measures].[TopProductName], [Measures].[MaxSales] } ON COLUMNS,
+  NON EMPTY [Temps].[Annee].[Annee].MEMBERS ON ROWS
+FROM 
+  [My Northwind DW];
+
+
+
+ 

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>DataSource1</DataSourceReference>
+      <CommandText>SELECT
+  NON EMPTY {[Measures].[Fait Ventes Remise Nombre]} ON COLUMNS,
+  NON EMPTY {
+    [Client].[Country].&amp;[France],
+    [Client].[Country].&amp;[Germany],
+    [Client].[Country].&amp;[Italy],
+    [Client].[Country].&amp;[United States]
+  } * 
+  [Temps].[Annee].[Annee].MEMBERS ON ROWS
+FROM [My Northwind DW]</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+          <CommandType>MDX</CommandType>
+          <Type>Query</Type>
+          <QuerySpecification xsi:type="MDXQuerySpecification">
+            <Select>
+              <Items>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Client</DimensionName>
+                    <HierarchyName>Country</HierarchyName>
+                    <HierarchyUniqueName>[Client].[Country]</HierarchyUniqueName>
+                    <LevelName>Country</LevelName>
+                    <UniqueName>[Client].[Country].[Country]</UniqueName>
+                  </ID>
+                  <ItemCaption>Country</ItemCaption>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Temps</DimensionName>
+                    <HierarchyName>Annee</HierarchyName>
+                    <HierarchyUniqueName>[Temps].[Annee]</HierarchyUniqueName>
+                    <LevelName>Annee</LevelName>
+                    <UniqueName>[Temps].[Annee].[Annee]</UniqueName>
+                  </ID>
+                  <ItemCaption>Annee</ItemCaption>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Fait Ventes Remise Nombre</MeasureName>
+                    <UniqueName>[Measures].[Fait Ventes Remise Nombre]</UniqueName>
+                  </ID>
+                  <ItemCaption>Fait Ventes Remise Nombre</ItemCaption>
+                  <FormattedValue>true</FormattedValue>
+                </Item>
+              </Items>
+            </Select>
+            <AutoExecute>false</AutoExecute>
+            <From>My Northwind DW</From>
+            <Filter>
+              <FilterItems />
+            </Filter>
+            <Calculations />
+            <Aggregates />
+            <QueryProperties />
+          </QuerySpecification>
+          <Query>
+            <Statement>SELECT
+  NON EMPTY {[Measures].[Fait Ventes Remise Nombre]} ON COLUMNS,
+  NON EMPTY {
+    [Client].[Country].&amp;[France],
+    [Client].[Country].&amp;[Germany],
+    [Client].[Country].&amp;[Italy],
+    [Client].[Country].&amp;[United States]
+  } * 
+  [Temps].[Annee].[Annee].MEMBERS ON ROWS
+FROM [My Northwind DW]</Statement>
+            <ParameterDefinitions />
+          </Query>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="Country">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Level" UniqueName="[Client].[Country].[Country]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Annee">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Level" UniqueName="[Temps].[Annee].[Annee]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Fait_Ventes_Remise_Nombre">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[Fait Ventes Remise Nombre]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

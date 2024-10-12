@@ -1,0 +1,113 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\univers\\Desktop\\ProjetBI\\repport\\Projet de rapport1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D530963B-7F0A-4E82-BC5A-8AD21DADDB6E}|Projet de rapport1\\Projet de rapport1.rptproj|C:\\Users\\univers\\Desktop\\ProjetBI\\repport\\Projet de rapport1\\Projet de rapport1\\Report5.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{D530963B-7F0A-4E82-BC5A-8AD21DADDB6E}|Projet de rapport1\\Projet de rapport1.rptproj|solutionrelative:Projet de rapport1\\Report5.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D530963B-7F0A-4E82-BC5A-8AD21DADDB6E}|Projet de rapport1\\Projet de rapport1.rptproj|C:\\Users\\univers\\Desktop\\ProjetBI\\repport\\Projet de rapport1\\Projet de rapport1\\Report4.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{D530963B-7F0A-4E82-BC5A-8AD21DADDB6E}|Projet de rapport1\\Projet de rapport1.rptproj|solutionrelative:Projet de rapport1\\Report4.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D530963B-7F0A-4E82-BC5A-8AD21DADDB6E}|Projet de rapport1\\Projet de rapport1.rptproj|C:\\Users\\univers\\Desktop\\ProjetBI\\repport\\Projet de rapport1\\Projet de rapport1\\Report2.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{D530963B-7F0A-4E82-BC5A-8AD21DADDB6E}|Projet de rapport1\\Projet de rapport1.rptproj|solutionrelative:Projet de rapport1\\Report2.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D530963B-7F0A-4E82-BC5A-8AD21DADDB6E}|Projet de rapport1\\Projet de rapport1.rptproj|C:\\Users\\univers\\Desktop\\ProjetBI\\repport\\Projet de rapport1\\Projet de rapport1\\Report1.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{D530963B-7F0A-4E82-BC5A-8AD21DADDB6E}|Projet de rapport1\\Projet de rapport1.rptproj|solutionrelative:Projet de rapport1\\Report1.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D530963B-7F0A-4E82-BC5A-8AD21DADDB6E}|Projet de rapport1\\Projet de rapport1.rptproj|C:\\Users\\univers\\Desktop\\ProjetBI\\repport\\Projet de rapport1\\Projet de rapport1\\Report3.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{D530963B-7F0A-4E82-BC5A-8AD21DADDB6E}|Projet de rapport1\\Projet de rapport1.rptproj|solutionrelative:Projet de rapport1\\Report3.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 272,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Report4.rdl [Conception]",
+              "DocumentMoniker": "C:\\Users\\univers\\Desktop\\ProjetBI\\repport\\Projet de rapport1\\Projet de rapport1\\Report4.rdl",
+              "RelativeDocumentMoniker": "Projet de rapport1\\Report4.rdl",
+              "ToolTip": "C:\\Users\\univers\\Desktop\\ProjetBI\\repport\\Projet de rapport1\\Projet de rapport1\\Report4.rdl [Conception]",
+              "RelativeToolTip": "Projet de rapport1\\Report4.rdl [Conception]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKESURBVDhPY2QAgslSMifV2dhNQWx8gInhX9GKjx9WzHn//gVUCBX8//\u002BfBcpkkEtNYRD38oDysIM7HV0FLkePCHAxMs6a9O7dM6gwAjAyMjKDaC9evlSdwEBpdglxhufrNjB8uX4DBf948pRB1MWZgUNaip/t2w9RjkePuESZmW/e/fXrx4////\u002BBDYMCuAtB4Nu9\u002BwxPFi\u002BB8hCAXVycQTY2moGJnYOBV1dXS\u002B3nD3aBw4e/fPj7d83Bb9\u002BePv/z5xdUKTBYSACPFy5i\u002BPHiOYNUWJgyn5Jyfaq4hKc9N7e0IDMz3GEkGQgCz9euBwbLegajpUs42WXkumL4BULC\u002BflFodKkG/j/92\u002BGj\u002BcvMFyvqmZUKsrnkrSzT7Pj4s7IExaWBsmjhCEhIBHgx8CnpwdmM7GxMghZWTGwcHAqM7GzBb/bvh0Ujq1EufDvjx8Mbw4eAqYKJgZuZSUw5pSVZfhw6jQDt6YGg5CtndZ/BkY/kFqiXPjn40eG6xVVYDYzNxcDCw8vMA3/Y/j99h2DZmc7WBwGSA5DyaAgBtP1axiMly5h4JCRgYoiAIaBoDSn3d/LoDd9KoOouxtUFAFYeLgZOCQkgOrEGJhYMD2IYSALDw\u002BDqLMTgxjQMG4lRago8YCgl1mFhBgErSzBGMQmBAgaKGBizGC8ZBEYg9iEAMmRQghghOrPly8ZrlfXggP809WrDH8\u002Bf2G4WlwKlvt0\u002BQrDtwcPGH6\u002BeMnw788fsFp0gOJCLmAkSAQGMLAKCDAwAyNH0NwcXGyB2CAMYoPEQGyQGpBaLiUlqG4IgLvw\u002B9OnDHz6usB0FgAVIR6A9MIAvArQYOcwA4uQCW78/HEq99kTcwCkwMCocNDs7gAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-04-23T22:49:58.864Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Report5.rdl [Conception]",
+              "DocumentMoniker": "C:\\Users\\univers\\Desktop\\ProjetBI\\repport\\Projet de rapport1\\Projet de rapport1\\Report5.rdl",
+              "RelativeDocumentMoniker": "Projet de rapport1\\Report5.rdl",
+              "ToolTip": "C:\\Users\\univers\\Desktop\\ProjetBI\\repport\\Projet de rapport1\\Projet de rapport1\\Report5.rdl [Conception]",
+              "RelativeToolTip": "Projet de rapport1\\Report5.rdl [Conception]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKESURBVDhPY2QAgslSMifV2dhNQWx8gInhX9GKjx9WzHn//gVUCBX8//\u002BfBcpkkEtNYRD38oDysIM7HV0FLkePCHAxMs6a9O7dM6gwAjAyMjKDaC9evlSdwEBpdglxhufrNjB8uX4DBf948pRB1MWZgUNaip/t2w9RjkePuESZmW/e/fXrx4////\u002BBDYMCuAtB4Nu9\u002BwxPFi\u002BB8hCAXVycQTY2moGJnYOBV1dXS\u002B3nD3aBw4e/fPj7d83Bb9\u002BePv/z5xdUKTBYSACPFy5i\u002BPHiOYNUWJgyn5Jyfaq4hKc9N7e0IDMz3GEkGQgCz9euBwbLegajpUs42WXkumL4BULC\u002BflFodKkG/j/92\u002BGj\u002BcvMFyvqmZUKsrnkrSzT7Pj4s7IExaWBsmjhCEhIBHgx8CnpwdmM7GxMghZWTGwcHAqM7GzBb/bvh0Ujq1EufDvjx8Mbw4eAqYKJgZuZSUw5pSVZfhw6jQDt6YGg5CtndZ/BkY/kFqiXPjn40eG6xVVYDYzNxcDCw8vMA3/Y/j99h2DZmc7WBwGSA5DyaAgBtP1axiMly5h4JCRgYoiAIaBoDSn3d/LoDd9KoOouxtUFAFYeLgZOCQkgOrEGJhYMD2IYSALDw\u002BDqLMTgxjQMG4lRago8YCgl1mFhBgErSzBGMQmBAgaKGBizGC8ZBEYg9iEAMmRQghghOrPly8ZrlfXggP809WrDH8\u002Bf2G4WlwKlvt0\u002BQrDtwcPGH6\u002BeMnw788fsFp0gOJCLmAkSAQGMLAKCDAwAyNH0NwcXGyB2CAMYoPEQGyQGpBaLiUlqG4IgLvw\u002B9OnDHz6usB0FgAVIR6A9MIAvArQYOcwA4uQCW78/HEq99kTcwCkwMCocNDs7gAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-04-23T14:15:03.982Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Report3.rdl [Conception]",
+              "DocumentMoniker": "C:\\Users\\univers\\Desktop\\ProjetBI\\repport\\Projet de rapport1\\Projet de rapport1\\Report3.rdl",
+              "RelativeDocumentMoniker": "Projet de rapport1\\Report3.rdl",
+              "ToolTip": "C:\\Users\\univers\\Desktop\\ProjetBI\\repport\\Projet de rapport1\\Projet de rapport1\\Report3.rdl [Conception]",
+              "RelativeToolTip": "Projet de rapport1\\Report3.rdl [Conception]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKESURBVDhPY2QAgslSMifV2dhNQWx8gInhX9GKjx9WzHn//gVUCBX8//\u002BfBcpkkEtNYRD38oDysIM7HV0FLkePCHAxMs6a9O7dM6gwAjAyMjKDaC9evlSdwEBpdglxhufrNjB8uX4DBf948pRB1MWZgUNaip/t2w9RjkePuESZmW/e/fXrx4////\u002BBDYMCuAtB4Nu9\u002BwxPFi\u002BB8hCAXVycQTY2moGJnYOBV1dXS\u002B3nD3aBw4e/fPj7d83Bb9\u002BePv/z5xdUKTBYSACPFy5i\u002BPHiOYNUWJgyn5Jyfaq4hKc9N7e0IDMz3GEkGQgCz9euBwbLegajpUs42WXkumL4BULC\u002BflFodKkG/j/92\u002BGj\u002BcvMFyvqmZUKsrnkrSzT7Pj4s7IExaWBsmjhCEhIBHgx8CnpwdmM7GxMghZWTGwcHAqM7GzBb/bvh0Ujq1EufDvjx8Mbw4eAqYKJgZuZSUw5pSVZfhw6jQDt6YGg5CtndZ/BkY/kFqiXPjn40eG6xVVYDYzNxcDCw8vMA3/Y/j99h2DZmc7WBwGSA5DyaAgBtP1axiMly5h4JCRgYoiAIaBoDSn3d/LoDd9KoOouxtUFAFYeLgZOCQkgOrEGJhYMD2IYSALDw\u002BDqLMTgxjQMG4lRago8YCgl1mFhBgErSzBGMQmBAgaKGBizGC8ZBEYg9iEAMmRQghghOrPly8ZrlfXggP809WrDH8\u002Bf2G4WlwKlvt0\u002BQrDtwcPGH6\u002BeMnw788fsFp0gOJCLmAkSAQGMLAKCDAwAyNH0NwcXGyB2CAMYoPEQGyQGpBaLiUlqG4IgLvw\u002B9OnDHz6usB0FgAVIR6A9MIAvArQYOcwA4uQCW78/HEq99kTcwCkwMCocNDs7gAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-04-23T13:35:58.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Report1.rdl [Conception]",
+              "DocumentMoniker": "C:\\Users\\univers\\Desktop\\ProjetBI\\repport\\Projet de rapport1\\Projet de rapport1\\Report1.rdl",
+              "RelativeDocumentMoniker": "Projet de rapport1\\Report1.rdl",
+              "ToolTip": "C:\\Users\\univers\\Desktop\\ProjetBI\\repport\\Projet de rapport1\\Projet de rapport1\\Report1.rdl [Conception]",
+              "RelativeToolTip": "Projet de rapport1\\Report1.rdl [Conception]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKESURBVDhPY2QAgslSMifV2dhNQWx8gInhX9GKjx9WzHn//gVUCBX8//\u002BfBcpkkEtNYRD38oDysIM7HV0FLkePCHAxMs6a9O7dM6gwAjAyMjKDaC9evlSdwEBpdglxhufrNjB8uX4DBf948pRB1MWZgUNaip/t2w9RjkePuESZmW/e/fXrx4////\u002BBDYMCuAtB4Nu9\u002BwxPFi\u002BB8hCAXVycQTY2moGJnYOBV1dXS\u002B3nD3aBw4e/fPj7d83Bb9\u002BePv/z5xdUKTBYSACPFy5i\u002BPHiOYNUWJgyn5Jyfaq4hKc9N7e0IDMz3GEkGQgCz9euBwbLegajpUs42WXkumL4BULC\u002BflFodKkG/j/92\u002BGj\u002BcvMFyvqmZUKsrnkrSzT7Pj4s7IExaWBsmjhCEhIBHgx8CnpwdmM7GxMghZWTGwcHAqM7GzBb/bvh0Ujq1EufDvjx8Mbw4eAqYKJgZuZSUw5pSVZfhw6jQDt6YGg5CtndZ/BkY/kFqiXPjn40eG6xVVYDYzNxcDCw8vMA3/Y/j99h2DZmc7WBwGSA5DyaAgBtP1axiMly5h4JCRgYoiAIaBoDSn3d/LoDd9KoOouxtUFAFYeLgZOCQkgOrEGJhYMD2IYSALDw\u002BDqLMTgxjQMG4lRago8YCgl1mFhBgErSzBGMQmBAgaKGBizGC8ZBEYg9iEAMmRQghghOrPly8ZrlfXggP809WrDH8\u002Bf2G4WlwKlvt0\u002BQrDtwcPGH6\u002BeMnw788fsFp0gOJCLmAkSAQGMLAKCDAwAyNH0NwcXGyB2CAMYoPEQGyQGpBaLiUlqG4IgLvw\u002B9OnDHz6usB0FgAVIR6A9MIAvArQYOcwA4uQCW78/HEq99kTcwCkwMCocNDs7gAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-04-23T13:20:12.339Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Report2.rdl [Conception]",
+              "DocumentMoniker": "C:\\Users\\univers\\Desktop\\ProjetBI\\repport\\Projet de rapport1\\Projet de rapport1\\Report2.rdl",
+              "RelativeDocumentMoniker": "Projet de rapport1\\Report2.rdl",
+              "ToolTip": "C:\\Users\\univers\\Desktop\\ProjetBI\\repport\\Projet de rapport1\\Projet de rapport1\\Report2.rdl [Conception]",
+              "RelativeToolTip": "Projet de rapport1\\Report2.rdl [Conception]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKESURBVDhPY2QAgslSMifV2dhNQWx8gInhX9GKjx9WzHn//gVUCBX8//\u002BfBcpkkEtNYRD38oDysIM7HV0FLkePCHAxMs6a9O7dM6gwAjAyMjKDaC9evlSdwEBpdglxhufrNjB8uX4DBf948pRB1MWZgUNaip/t2w9RjkePuESZmW/e/fXrx4////\u002BBDYMCuAtB4Nu9\u002BwxPFi\u002BB8hCAXVycQTY2moGJnYOBV1dXS\u002B3nD3aBw4e/fPj7d83Bb9\u002BePv/z5xdUKTBYSACPFy5i\u002BPHiOYNUWJgyn5Jyfaq4hKc9N7e0IDMz3GEkGQgCz9euBwbLegajpUs42WXkumL4BULC\u002BflFodKkG/j/92\u002BGj\u002BcvMFyvqmZUKsrnkrSzT7Pj4s7IExaWBsmjhCEhIBHgx8CnpwdmM7GxMghZWTGwcHAqM7GzBb/bvh0Ujq1EufDvjx8Mbw4eAqYKJgZuZSUw5pSVZfhw6jQDt6YGg5CtndZ/BkY/kFqiXPjn40eG6xVVYDYzNxcDCw8vMA3/Y/j99h2DZmc7WBwGSA5DyaAgBtP1axiMly5h4JCRgYoiAIaBoDSn3d/LoDd9KoOouxtUFAFYeLgZOCQkgOrEGJhYMD2IYSALDw\u002BDqLMTgxjQMG4lRago8YCgl1mFhBgErSzBGMQmBAgaKGBizGC8ZBEYg9iEAMmRQghghOrPly8ZrlfXggP809WrDH8\u002Bf2G4WlwKlvt0\u002BQrDtwcPGH6\u002BeMnw788fsFp0gOJCLmAkSAQGMLAKCDAwAyNH0NwcXGyB2CAMYoPEQGyQGpBaLiUlqG4IgLvw\u002B9OnDHz6usB0FgAVIR6A9MIAvArQYOcwA4uQCW78/HEq99kTcwCkwMCocNDs7gAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-04-23T13:15:26.608Z",
+              "EditorCaption": " [Conception]"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 51,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

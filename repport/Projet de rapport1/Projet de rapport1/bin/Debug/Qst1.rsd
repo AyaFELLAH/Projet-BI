@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>DataSource1</DataSourceReference>
+      <CommandText>WITH MEMBER [Measures].[Continent] AS
+    IIF(
+        [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Austria]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Belgium]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Denmark]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Finland]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[France]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Germany]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Ireland]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Italy]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Norway]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Poland]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Portugal]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Spain]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Sweden]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Switzerland]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[United Kingdom],
+        "Europe",
+        IIF(
+            [Client].[Country].CurrentMember IS [Client].[Country].&amp;[United States]
+            OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Argentina]
+            OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Brazil]
+            OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Venezuela]
+            OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Mexico]
+            OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Canada],
+            "Amerique",
+            "Autre"
+        )
+    )
+
+SELECT
+    NON EMPTY { [Measures].[Quantity], [Measures].[Continent] } ON COLUMNS,
+    NON EMPTY [Client].[Country].[Country] * [Client].[City].[City] ON ROWS
+FROM [My Northwind DW]</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+          <CommandType>MDX</CommandType>
+          <Type>Query</Type>
+          <QuerySpecification xsi:type="MDXQuerySpecification">
+            <Select>
+              <Items>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Client</DimensionName>
+                    <HierarchyName>Country</HierarchyName>
+                    <HierarchyUniqueName>[Client].[Country]</HierarchyUniqueName>
+                    <LevelName>Country</LevelName>
+                    <UniqueName>[Client].[Country].[Country]</UniqueName>
+                  </ID>
+                  <ItemCaption>Country</ItemCaption>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Client</DimensionName>
+                    <HierarchyName>City</HierarchyName>
+                    <HierarchyUniqueName>[Client].[City]</HierarchyUniqueName>
+                    <LevelName>City</LevelName>
+                    <UniqueName>[Client].[City].[City]</UniqueName>
+                  </ID>
+                  <ItemCaption>City</ItemCaption>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Quantity</MeasureName>
+                    <UniqueName>[Measures].[Quantity]</UniqueName>
+                  </ID>
+                  <ItemCaption>Quantity</ItemCaption>
+                  <FormattedValue>true</FormattedValue>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Continent</MeasureName>
+                    <UniqueName>[Measures].[Continent]</UniqueName>
+                  </ID>
+                  <ItemCaption>Continent</ItemCaption>
+                  <FormattedValue>true</FormattedValue>
+                </Item>
+              </Items>
+            </Select>
+            <AutoExecute>false</AutoExecute>
+            <From>My Northwind DW</From>
+            <Filter>
+              <FilterItems />
+            </Filter>
+            <Calculations />
+            <Aggregates />
+            <QueryProperties />
+          </QuerySpecification>
+          <Query>
+            <Statement>WITH MEMBER [Measures].[Continent] AS
+    IIF(
+        [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Austria]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Belgium]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Denmark]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Finland]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[France]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Germany]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Ireland]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Italy]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Norway]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Poland]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Portugal]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Spain]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Sweden]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Switzerland]
+        OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[United Kingdom],
+        "Europe",
+        IIF(
+            [Client].[Country].CurrentMember IS [Client].[Country].&amp;[United States]
+            OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Argentina]
+            OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Brazil]
+            OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Venezuela]
+            OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Mexico]
+            OR [Client].[Country].CurrentMember IS [Client].[Country].&amp;[Canada],
+            "Amerique",
+            "Autre"
+        )
+    )
+
+SELECT
+    NON EMPTY { [Measures].[Quantity], [Measures].[Continent] } ON COLUMNS,
+    NON EMPTY [Client].[Country].[Country] * [Client].[City].[City] ON ROWS
+FROM [My Northwind DW]
+</Statement>
+            <ParameterDefinitions />
+          </Query>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="Country">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Level" UniqueName="[Client].[Country].[Country]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="City">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Level" UniqueName="[Client].[City].[City]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Quantity">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[Quantity]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Continent">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[Continent]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
